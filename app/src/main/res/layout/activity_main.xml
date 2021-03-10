@@ -7,14 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="209dp"
+    <GridView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="200dp"
-        android:text="Select Item From List" />
+        android:layout_marginTop="10dp"
+        android:numColumns="5"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        android:id="@+id/gridView"></GridView>
 </RelativeLayout>

@@ -32,27 +32,12 @@ public class DisplayActivity extends AppCompatActivity{
         textView = (TextView) findViewById(R.id.textView);
         imageView = (ImageView) findViewById(R.id.imageView);
         Intent intent = getIntent();
-        String text = intent.getStringExtra("key");
-        textView.setText(text);
-        if(text.equalsIgnoreCase("atacama"))
+        if(intent.getExtras() != null)
         {
-            imageView.setImageResource(R.drawable.atacama);
-        }
-        if(text.equalsIgnoreCase("Gobi"))
-        {
-            imageView.setImageResource(R.drawable.gobi);
-        }
-        if(text.equalsIgnoreCase("mohave"))
-        {
-            imageView.setImageResource(R.drawable.mohave);
-        }
-        if(text.equalsIgnoreCase("Patagonian"))
-        {
-            imageView.setImageResource(R.drawable.patagonian);
-        }
-        if(text.equalsIgnoreCase("sahara"))
-        {
-            imageView.setImageResource(R.drawable.sahara);
+            String selectName = intent.getStringExtra("name");
+            int selectedImage = intent.getIntExtra("image",0);
+            textView.setText(selectName);
+            imageView.setImageResource(selectedImage);
         }
     }
 
