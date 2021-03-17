@@ -22,13 +22,12 @@ public class DisplayActivity extends AppCompatActivity{
 
     TextView textView;
     ImageView imageView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
-        setTitle("Assignment 4: Display");
+        setTitle(getResources().getString(R.string.title_activity_display));
         textView = (TextView) findViewById(R.id.textView);
         imageView = (ImageView) findViewById(R.id.imageView);
         Intent intent = getIntent();

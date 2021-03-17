@@ -21,14 +21,15 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     GridView gridview;
-    String[] names = {"Atacama","Gobi","Mohave","Patagonian","Sahara"};
+    String[] names;   //{"Atacama","Gobi","Mohave","Patagonian","Sahara"};
     int[] images = {R.drawable.atacama, R.drawable.gobi, R.drawable.mohave, R.drawable.patagonian, R.drawable.sahara};
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Assignment 4: Selection");
+        setTitle(getResources().getString(R.string.main_activity_title));
+        names =  getResources().getStringArray(R.array.deserts);
         gridview = findViewById(R.id.gridView);
         CustomAdapter customAdapter = new CustomAdapter(names,images,this);
         gridview.setAdapter(customAdapter);
