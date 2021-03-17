@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CIS3515_Affectation4</string>
+    <string name="main_activity_title">Affectation 4: Sélection</string>
+    <string name="title_activity_display">Affectation 4: Affichage</string>
+    <string-array name="deserts">
+        <item>Le Atacama</item>
+        <item>Le Gobi</item>
+        <item>Le Mohave</item>
+        <item>Le Patagonien</item>
+        <item>:Le Sahara</item>
+    </string-array>
+</resources>
